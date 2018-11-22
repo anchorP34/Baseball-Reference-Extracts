@@ -3,13 +3,13 @@ Different python codes that help with pulling information of MLB baseball games 
 # get_all_season_innings.py
 Pulling every inning of every game from the input season from https://www.baseball-reference.com. 
     
-INPUT: 
+    INPUT: 
         Season (int) - The season of the MLB year you would like to pull
         end_date (string) - Date of the last game that you would like to pull before
                        Example: If the playoffs in the 2017 season start  October 3, 2017, you want that 
                        to be the stop date. So, for end_date, you would put '20171003' as the stop date.
     
-OUTPUT: 
+    OUTPUT: 
         all_seasons_dict (dictionary) - Shows the following information about the season for each team
             TotalWins - Total Wins
             TotalLosses - Total Losses
