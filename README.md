@@ -30,3 +30,14 @@ Pulling every inning of every game from the input season from https://www.baseba
             HomeDefenseInnings - Arrays of each defensive inning for every home game of the season. If X, that meant the
                                     inning wasn't needed in the bottom of the 9th
             AwayInnings - Arrays of each defensive inning for every away game of the season. 
+
+# JSON Files (baseball_season_XXXX_full.json)
+If you do not want to manually web scrape the values from the get_all_season_innings.py script, I have pulled the same information for the 2015-2018 seasons. They have all of the same information as the output of the get_all_season_innings.py script, with the overall heading key being the season year. They are JSON files, so the easiest way to pull in the information is with the following code:
+    
+    import json
+    seasons = [2015,2016,2017,2018]
+
+    for season in seasons:
+        # For each season, load in the web scraped data json file
+        with open('baseball_season_{}_full.json'.format(season)) as f:
+            globals()['season_{}'.format(season)] = json.load(f)
